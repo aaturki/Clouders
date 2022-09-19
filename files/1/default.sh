@@ -1,6 +1,10 @@
 PROJECT_ID=`gcloud projects list  --format='value(project_id)'| grep qwiklabs-gcp | head -1`
 gcloud config set project $PROJECT_ID
 
+
+curl -o default.sh https://raw.githubusercontent.com/aaturki/Clouders/edit/main/files/1/default.sh
+source default.sh
+
 echo "${BOLD}${CYAN}$PROJECT_ID${RESET}"
 
 gcloud services enable \
