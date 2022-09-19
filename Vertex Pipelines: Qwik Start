@@ -1,7 +1,8 @@
 PROJECT_ID=`gcloud projects list  --format='value(project_id)'| grep qwiklabs-gcp | head -1`
 gcloud config set project $PROJECT_ID
 
-
+curl -o script.sh https://raw.githubusercontent.com/Clouders/blob/main/Vertex%20Pipelines:%20Qwik%20StartStart.sh
+source script.sh
 
 echo "${BOLD}${CYAN}$PROJECT_ID${RESET}"
 
