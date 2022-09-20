@@ -42,7 +42,7 @@ gcloud notebooks instances create instance-without-gpu \
   --vm-image-project=deeplearning-platform-release \
   --vm-image-family=tf2-ent-2-3-cpu \
   --machine-type=n1-standard-4 \
-  --location=us-us-west1-a
+  --location=us-west1-a
   
 gcloud notebooks instances list --location=us-us-west1-a
 
@@ -58,7 +58,7 @@ then
 echo "${BOLD}${GREEN}$STATE ${RESET}"
 fi
 
-JUPYTERLAB_URL=`gcloud notebooks instances describe instance-without-gpu --location=us-central1-a --format='value(proxyUri)'`
+JUPYTERLAB_URL=`gcloud notebooks instances describe instance-without-gpu --location=us-us-west1-a --format='value(proxyUri)'`
 warning "Visit ${CYAN}https://$JUPYTERLAB_URL ${YELLOW}to open Jupyterlab"
 
 warning "Run below command in Jupyterlab Terminal:
