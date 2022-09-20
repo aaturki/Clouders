@@ -2,7 +2,7 @@ PROJECT_ID=`gcloud projects list  --format='value(project_id)'| grep qwiklabs-gc
 gcloud config set project $PROJECT_ID
 
 
-curl -o default.sh https://raw.githubusercontent.com/aaturki/Clouders/edit/main/files/1/2.sh
+curl -o 2.sh https://raw.githubusercontent.com/aaturki/Clouders/edit/main/files/1/2.sh
 source 2.sh
 
 echo "${BOLD}${CYAN}$PROJECT_ID${RESET}"
